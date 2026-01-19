@@ -158,3 +158,44 @@ Each pipeline stage boundary is implemented using banks of D flip-flops.
 * Synchronous handoff between stages
 * High-frequency operation
 ---
+
+Below is a **clean replacement for Section 9**, formatted as an educational truth/characteristic table suitable for a README or lab manual.
+
+---
+
+## 9. D Flip-Flop Functional Table
+
+The behavior of a D flip-flop is defined at the **active clock edge**. For this design, the active edge is the **rising edge of the clock**, and the reset is **synchronous**.
+
+### 9.1 Functional (Characteristic) Table
+
+| Clock Edge | Reset | D | Q (Next State) | Description                         |
+| ---------- | ----- | - | -------------- | ----------------------------------- |
+| ↑          | 1     | X | 0              | Synchronous reset forces output low |
+| ↑          | 0     | 0 | 0              | Output captures logic 0             |
+| ↑          | 0     | 1 | 1              | Output captures logic 1             |
+| No ↑       | X     | X | Q (Previous)   | Output holds previous value         |
+
+---
+
+### 9.2 Notes on the Table
+
+* `↑` denotes the **positive (rising) edge** of the clock.
+* `X` indicates a **don’t-care** condition.
+* The output updates **only** on the rising edge.
+* When no rising edge occurs, the flip-flop **retains its stored state**.
+* Reset has priority over data when asserted.
+
+---
+
+### 9.3 Characteristic Equation
+
+[
+Q_{next} =
+\begin{cases}
+0, & \text{if reset = 1} \
+D, & \text{if reset = 0 at } \uparrow clk
+\end{cases}
+]
+
+---
