@@ -128,13 +128,13 @@ The testbench is designed to **validate functional correctness**, timing behavio
 
 ## 8.1 Registers in Processors and Microcontrollers
 
-Every processor register—whether in:
+### Every processor register—whether in:
 * RISC-V
 * ARM Cortex cores
 * Microcontrollers (STM32, AVR, ESP32)
 is fundamentally built using arrays of D flip-flops.
 
-Use case:
+### Use case:
 * Storing operands
 * Holding instruction fields
 * Preserving state across clock cycles
@@ -147,12 +147,12 @@ Without D flip-flops, sequential instruction execution would not be possible.
 Modern processors rely on pipelining to increase throughput.
 Each pipeline stage boundary is implemented using banks of D flip-flops.
 
-Examples:
+### Examples:
 * Instruction Fetch → Decode
 * Decode → Execute
 * Execute → Memory
 
-D flip-flops ensure:
+### D flip-flops ensure:
 * Data stability within a stage
 * Synchronous handoff between stages
 *High-frequency operation
