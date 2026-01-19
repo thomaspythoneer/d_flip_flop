@@ -126,7 +126,7 @@ The testbench is designed to **validate functional correctness**, timing behavio
 
 ---
 
-##10.1 Registers in Processors and Microcontrollers
+## 8.1 Registers in Processors and Microcontrollers
 
 Every processor register—whether in:
 * RISC-V
@@ -142,7 +142,7 @@ Without D flip-flops, sequential instruction execution would not be possible.
 
 ---
 
-10.2 Pipeline Stages in CPUs and DSPs
+## 8.2 Pipeline Stages in CPUs and DSPs
 
 Modern processors rely on pipelining to increase throughput.
 Each pipeline stage boundary is implemented using banks of D flip-flops.
