@@ -140,6 +140,8 @@ Use case:
 * Preserving state across clock cycles
 Without D flip-flops, sequential instruction execution would not be possible.
 
+---
+
 10.2 Pipeline Stages in CPUs and DSPs
 
 Modern processors rely on pipelining to increase throughput.
@@ -154,3 +156,4 @@ D flip-flops ensure:
 * Data stability within a stage
 * Synchronous handoff between stages
 *High-frequency operation
+---
