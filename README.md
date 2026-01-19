@@ -137,7 +137,8 @@ is fundamentally built using arrays of D flip-flops.
 ### Use case:
 * Storing operands
 * Holding instruction fields
-* Preserving state across clock cycles
+* Preserving state across clock cycles.
+  
 Without D flip-flops, sequential instruction execution would not be possible.
 
 ---
@@ -155,5 +156,5 @@ Each pipeline stage boundary is implemented using banks of D flip-flops.
 ### D flip-flops ensure:
 * Data stability within a stage
 * Synchronous handoff between stages
-*High-frequency operation
+* High-frequency operation
 ---
